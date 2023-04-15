@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    float: none;
+	position: static;
+    list-style: none;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    min-width: 1440px;
+}
+
+.phoneVer{
+    display: none;
+}
+
+/*--------------------------------------------------*/
+header{
+    background-color: black;
+    height: 80px;
+    
+}
+.header-left{
+    float: left;
+}
+
+.header-left img{
+    margin-top: 6px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.header-center h3{
+    color: white;
+    font-size: 20px;
+    line-height: 80px;
+    padding-left: 100px;
+    width: 380px;
+}
+
+.header-right{
+    display: none;
+}
+
+
+
+/*==================================================
+　5-2-8 3本線が横方向に回転して×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+ 追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+	border-radius: 5px;
+
+}
+
+/*ボタン内側*/
+
+
+.openbtn span{
+    display: inline-block;
+    transition: all 0.5s;
+    position: absolute;
+    left: 5px;
+    height: 4px;
+    border-radius: 3px;
+	background: #fff;
+  	width: 70%;
+}
+
+.openbtn span:nth-of-type(1) {
+	top:25px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:37px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:49px;
+}
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+
+
+.openbtn.active span:nth-of-type(1) {
+    top: 31px;
+    left: 4px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 43px;
+    left: 4px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 70%;
+}
+
+.swich-wrapper{
+    background-color: grey;
+    text-align: center;
+    border-bottom: 10px solid black;
+   
+}
+.swich-wrapper a{
+    padding: 20px 75px;
+    background-color: white;
+    display: inline-block;
+    color: black;
+    opacity: 0.6;
+    font-size: 20px;
+    transition: 0.3s;
+    font-family: "Arial Black";   
+}
+
+.swich-wrapper a:hover{
+    opacity: 1;
+}
+/*--------------------------------------------------*/
+
+.goods-wrapper::after {
+    content:"";
+    display:block;
+    position:fixed;
+    top:30px;
+    left:0;
+    z-index:-1;
+    width:1440px;
+    height:100%;
+    background-image:url(/img/a1.png);
+    background-size:50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.goods-wrapper{
+    text-align: center;
+}
+.black{
+    background-color: rgba(0, 0, 0, 0.722);
+    color: white;
+    padding: 20px 0;
+}
+.white{
+    background-color: rgba(255, 255, 255, 0.722);
+    color: black;
+    padding: 20px 0;
+}
+.top-text h1{
+    font-family: "Honoka_Shin_Mincho_L";
+    font-size: 70px;
+}
+.goods-list h2{
+    font-family: "rounded-l-mgenplus-1c-black";
+    font-size: 35px;
+}
+.goods-list h3{
+    font-size: 30px;
+    font-family: "Honoka_Shin_Mincho_L";
+}
+.goods-list img{
+    margin: 20px 0;
+}
+
+
+
+/*--------------------------------------------------*/
+
+footer{
+    height: 80px;
+}
+
+.fotter-logo p{
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+}
